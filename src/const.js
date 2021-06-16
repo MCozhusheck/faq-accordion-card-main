@@ -1,0 +1,10 @@
+export const mobilePB = '375px';
+export const dekstopPB = '1440px';
+export const textVeryDarkDesaturatedBlue = 'hsl(238, 29%, 16%)';
+export const textSoftRed = 'hsl(14, 88%, 65%)';
+export const textVeryDarkGrayishBlue = 'hsl(237, 12%, 33%)';
+export const textDarkGrayishBlue = 'hsl(240, 6%, 50%)'
+export const colorSoftViolet = 'hsl(273, 75%, 66%)';
+export const colorSoftBlue = 'hsl(240, 73%, 65%)';
+export const colorDivider = 'hsl(240, 5%, 91%)';
+export const fontSize = '12px';
