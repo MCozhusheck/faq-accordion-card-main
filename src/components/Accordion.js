@@ -1,7 +1,5 @@
 import {useState, useRef} from 'react';
-import styled, {css} from 'styled-components';
-import {ReactComponent as ArrowDown} from '../images/icon-arrow-down.svg';
-import { colorDivider, textSoftRed, textVeryDarkDesaturatedBlue, textVeryDarkGrayishBlue, textDarkGrayishBlue } from '../const';
+import styled from 'styled-components';
 import AccordionItem from './AccordionItem';
 
 const StyledContainer = styled.div`
