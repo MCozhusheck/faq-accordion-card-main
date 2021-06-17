@@ -63,7 +63,7 @@ const AccordionItems = ({
   ));
 
 function Accordion() {
-  const [currentAccordion, setCurrentAccordion] = useState(0);
+  const [currentAccordion, setCurrentAccordion] = useState(-1);
   const [bodyHeight, setBodyHeight] = useState(0);
 
   const item0 = useRef(null);
