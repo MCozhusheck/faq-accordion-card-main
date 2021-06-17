@@ -8,7 +8,7 @@ const StyledIllustrationContainer = styled.div`
   justify-content: center;
   flex-flow: column nowrap;
   margin-left: -30px;
-  margin-top: -110px;
+  margin-top: -154px;
 `
 
 const StyledBgPattern = styled(BgPattern)`

@@ -11,14 +11,12 @@ const StyledContainer = styled.div`
   width: 100%;
 `;
 const AccordionItem = styled.div`
-  &:not(:last-child) {
-    border-bottom: 1px solid ${colorDivider};
-  }
+  border-bottom: 1px solid ${colorDivider};
 `;
 
 const AccordionHeader = styled.div`
   margin: 0;
-  padding: 1rem;
+  padding: 1rem 0;
   cursor: pointer;
   font-size: 13px;
   display: flex;
@@ -62,7 +60,7 @@ const AccordionBody = styled.div`
 
 const AccordionContent = styled.p`
   margin: 0;
-  padding: 0 1rem 1rem;
+  padding: 0 0;
   height: auto;
   color: ${textDarkGrayishBlue};
 `;
