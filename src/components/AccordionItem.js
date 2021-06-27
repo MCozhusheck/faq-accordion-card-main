@@ -1,6 +1,6 @@
 import styled, {css} from 'styled-components';
 import {ReactComponent as ArrowDown} from '../images/icon-arrow-down.svg';
-import { colorDivider, textSoftRed, textVeryDarkDesaturatedBlue, textVeryDarkGrayishBlue, textDarkGrayishBlue } from '../const';
+import { colorDivider, textSoftRed, textVeryDarkDesaturatedBlue, textVeryDarkGrayishBlue, textDarkGrayishBlue, dekstopPB } from '../const';
 
 const Container = styled.div`
   border-bottom: 1px solid ${colorDivider};
@@ -27,8 +27,10 @@ const AccordionTitle = styled.p`
     `
   }
 
-  ${AccordionHeader}:hover & {
-    color: ${textSoftRed};
+  @media only screen and (min-width: ${dekstopPB}) {
+    ${AccordionHeader}:hover & {
+      color: ${textSoftRed};
+    }
   }
 `;
 
