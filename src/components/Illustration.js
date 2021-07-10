@@ -1,5 +1,4 @@
 import { useMediaQuery } from 'react-responsive'
-import { dekstopPB, mobilePB } from '../const';
 import styled from "styled-components";
 import { ReactComponent as BgPatternMobile } from '../images/bg-pattern-mobile.svg';
 import { ReactComponent as WomanOnlineMobile } from '../images/illustration-woman-online-mobile.svg'
