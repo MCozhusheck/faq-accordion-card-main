@@ -1,10 +1,10 @@
 import { useMediaQuery } from 'react-responsive'
-import { dekstopPB } from '../const';
+import { dekstopPB, mobilePB } from '../const';
 import styled from "styled-components";
 import { ReactComponent as BgPatternMobile } from '../images/bg-pattern-mobile.svg';
 import { ReactComponent as WomanOnlineMobile } from '../images/illustration-woman-online-mobile.svg'
 import { ReactComponent as WomanOnlineDesktop} from '../images/illustration-woman-online-desktop.svg';
-import { ReactComponent as IllustrationBoxDesktop } from '../images/illustration-box-desktop.svg';
+import boxImage from '../images/illustration-box-desktop.svg';
 
 const ContainerMobile = styled.div`
   display: flex;
@@ -21,21 +21,25 @@ const StyledBgPatternMobile = styled(BgPatternMobile)`
 
 const ContainerDesktop = styled.div`
   position: relative;
-  width: 700px;
+  width: 400px;
   height: 100%;
 `
 
 const StyledWomanOnlineDesktop = styled(WomanOnlineDesktop)`
   position: absolute;
-  top: 30px;
+  top: -200px;
   left: -100px;
   overflow: hidden;
 `;
 
-const StyledIllustrationBoxDesktop = styled(IllustrationBoxDesktop)`
+const StyledIllustrationBoxDesktop = styled.div`
   position: absolute;
-  top: 170px;
+  background-image: url('${boxImage}');
+  width: 191px;
+  height: 184px;
+  top: -70px;
   left: -120px;
+  z-index: 1000;
 `;
 
 const MobileIllustration = () => {
@@ -56,16 +60,26 @@ const DesktopIllustration = () => {
   )
 }
 
+const Desktop = ({children }) => {
+  const isDesktop = useMediaQuery({ minWidth: 1440 })
+  return isDesktop ? children : null
+}
+const Mobile = ({children }) => {
+  const isMobile = useMediaQuery({ minWidth: 375, maxWidth: 1439 })
+  return isMobile ? children : null
+}
+
 function Illustration() {
-  const isTabletOrMobile = useMediaQuery({ query: `(max-width: ${dekstopPB})` })
 
   return(
-    <>
-      {isTabletOrMobile ?
-        <MobileIllustration/> :
+    <div>
+      <Desktop>
         <DesktopIllustration/>
-      }
-    </>
+      </Desktop>
+      <Mobile>
+        <MobileIllustration/>
+      </Mobile>
+    </div>
   )
 }
 

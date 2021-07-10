@@ -24,7 +24,6 @@ const StyledCard = styled.div`
     background-image: url(${BgPatternDesktop});
     background-repeat: no-repeat;
     background-position: -570px -300px;
-    overflow: hidden;
   }
 `
 
